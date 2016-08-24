@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         catch (NumberFormatException e)
         {
             intMedical = 0;
+            //TODO
         }
         try
         {
