@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TaxCalculator</string>
+    <string-array name="operation_Mode">
+        <item>Male</item>
+        <item>Female</item>
+        <item>65Y+Male</item>
+        <item>65Y+Female</item>
+        <item>Business</item>
+        <item>Individual</item>
+    </string-array>
 </resources>

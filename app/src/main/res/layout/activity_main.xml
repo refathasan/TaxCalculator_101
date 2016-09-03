@@ -3,101 +3,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/Theme.AppCompat.DayNight"
+    android:background="@drawable/bg"
     tools:context="com.technodhaka.taxcalculator.MainActivity">
-    <include layout ="@layout/header"
-        />
+
+    <include layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_below="@+id/header"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                android:id="@+id/spOperationOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_margin="2dp">
+
+            </Spinner>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spOperationOption"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+                android:weightSum="1"
+                android:layout_marginLeft="5dp">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:layout_weight=".34"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="District"
+                    android:layout_weight=".33"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".33"
+                    android:text="Other"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight=".7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="Basic Salary" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="House Rent" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="Conveyance" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="Medical" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="Fest. Bonus" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="Yearly Total " />
+
+                    <TextView
+                        style="@style/text_view"
+                        android:gravity="center|left"
+                        android:text="TAX"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:paddingRight="5dp">
+
+                    <EditText
+                        android:id="@+id/edt_basic_sal"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <requestFocus />
+
+                    <EditText
+                        android:id="@+id/edt_house_rent"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/edt_convence"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/edt_medical"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/edt_fest_bonus"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/text_total_sal"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/text_total_tax"
+                        style="@style/text_view"
+                        android:gravity="right|center"
+                        android:hint="0"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll"
+        android:gravity="right"
+        android:layout_margin="5dp"
         android:orientation="horizontal"
-        android:layout_below="@+id/header"
-        android:paddingTop="10dp"
-        android:layout_marginLeft="3dp"
         android:weightSum="1">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginRight="3dp"
-            android:layout_weight=".7">
-            <TextView
-                style="@style/text_view"
-                android:text="Basic Salary"
-                android:gravity="center|left"/>
-            <TextView
-                style="@style/text_view"
-                android:text="House Rent"
-                android:gravity="center|left"/>
-            <TextView
-                style="@style/text_view"
-                android:text="Conveyance"
-                android:gravity="center|left"/>
-            <TextView
-                style="@style/text_view"
-                android:text="Medical"
-                android:gravity="center|left"
-                />
-            <TextView
-                style="@style/text_view"
-                android:text="Festival Bonus"
-                android:gravity="center|left"/>
-            <TextView
-                style="@style/text_view"
-                android:text="Total Salary"
-                android:gravity="center|left"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight=".3"
-            android:layout_marginLeft="3dp"
-            android:paddingRight="5dp"
-            android:layout_marginRight="1dp">
-            <EditText
-                style="@style/text_view"
-                android:id="@+id/edt_basic_sal"
-                android:inputType="numberDecimal"
-                android:gravity="right|center"
-                android:hint="0"/>
-            <EditText
-                style="@style/text_view"
-                android:id="@+id/edt_house_rent"
-                android:inputType="numberDecimal"
-                android:gravity="right|center"
-                android:hint="0"/>
-            <EditText
-                style="@style/text_view"
-                android:inputType="numberDecimal"
-                android:id="@+id/edt_convence"
-                android:gravity="right|center"
-                android:hint="0"/>
-            <EditText
-                style="@style/text_view"
-                android:inputType="numberDecimal"
-                android:id="@+id/edt_medical"
-                android:gravity="right|center"
-                android:hint="0"/>
-            <EditText
-                style="@style/text_view"
-                android:inputType="numberDecimal"
-                android:id="@+id/edt_fest_bonus"
-                android:gravity="right|center"
-                android:hint="0"/>
-            <TextView
-                style="@style/text_view"
-                android:inputType="numberDecimal"
-                android:id="@+id/tex_total_sal"
-                android:hint="0"
-                android:gravity="left|center"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Count"
-                android:id="@+id/btnCount"
-                android:layout_gravity="right"
 
-                android:gravity="center"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="Clear"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="IN Total"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
     </LinearLayout>
 </RelativeLayout>

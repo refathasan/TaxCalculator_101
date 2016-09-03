@@ -19,4 +19,5 @@
         <item name="android:layout_marginBottom">5dp</item>
         <item name="android:textSize">14dp</item>
     </style>
+
 </resources>

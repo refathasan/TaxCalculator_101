@@ -11,6 +11,7 @@
     android:paddingRight="5dp"
     android:paddingBottom="5dp"
     android:paddingTop="5dp"
+    android:background="@drawable/background_img"
     tools:context="com.technodhaka.taxcalculator.SplashScreenActivity">
     <ImageView
         android:layout_centerHorizontal="true"

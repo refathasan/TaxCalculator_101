@@ -5,15 +5,16 @@
     android:id="@+id/header"
     android:layout_width="match_parent"
     android:layout_height="55dp"
+    android:gravity="left|center"
     android:layout_alignParentTop="true"
     android:paddingTop="5dip"
     android:paddingBottom="5dip"
-    android:background="#ff00d8ff">
+    android:background="#5ba4ed">
 
     <ImageView android:id="@+id/logo"
-        android:src="@drawable/td_logo"
+        android:src="@drawable/xxx"
+        android:paddingLeft="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dip"/>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
